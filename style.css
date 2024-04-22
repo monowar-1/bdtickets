@@ -6,56 +6,62 @@
   overflow: none;
 }
 body {
-  background-color: #f0ebff;
+  background-color: #fff;
+  background-image: url("image/banner-web.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  width: 100%;
 }
 
-.navbar {
+.navbar-main {
   height: 80px;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.151);
   width: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
-.logo{
-  margin-right: 20px;
+.logo {
+  margin-right: 25px;
 }
-.links {
+.navbar-menu {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 40px;
 }
 
-.link {
+.menu-tab {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 5px;
+  gap: 8px;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 13px!important;
-   font-weight: 600;
+  font-size: 14px !important;
+  font-weight: 700;
   color: rgb(58 57 57 / 90%);
 }
 
-.link:hover {
+.menu-tab:hover {
   color: #e30b13;
 }
 
 .call {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   background-color: #e30b13;
   color: white;
   border-radius: 10px;
@@ -63,14 +69,14 @@ body {
   width: 150px;
   cursor: pointer;
 }
-.call p{
-  font-size: 12px!important;
-    font-weight: 600;
+.call p {
+  font-size: 12px !important;
+  font-weight: 600;
 }
 .call:active, .call:focus, .call:hover {
   color: #fff;
-   border-color: #f52c34;
-   background: #f52c34;
+  border-color: #f52c34;
+  background: #f52c34;
 }
 
 .my-bookings {
@@ -79,8 +85,8 @@ body {
   justify-content: center;
   gap: 10px;
   background-color: transparent;
-  color: #E30B13;
-  border: 2px solid #E30B13;
+  color: #e30b13;
+  border: 2px solid #e30b13;
   border-radius: 10px;
   height: 50px;
   width: 160px;
@@ -92,34 +98,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   background-color: transparent;
   color: rgb(58 57 57 / 90%);
-/*   border: 2px solid #E30B13; */
-  border-radius: 10px;
   height: 50px;
-  width: 150px;
+  width: 170px;
   cursor: pointer;
 }
 
 .main {
-  padding-top: 80px;
+  padding-top: px;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://bdtickets.com/images/banner/banner-web.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
+  min-height: 10vh;
 }
 
 .choose-routes {
   width: 80%;
   background-color: #ffffff;
-  box-shadow: 0 0 10px black;
   padding: 40px 40px 20px 40px;
   border-radius: 10px;
   position: relative;
@@ -127,18 +126,18 @@ body {
   margin-top: 120px;
 }
 
-.transports {
+.ticket {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -100%);
-  width: 60%;
+  width: 35%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: rgb(255, 255, 255);
   border-radius: 10px 10px 0 0;
-  padding: 10px;
+  padding: 20px;
 }
 
 .search-btn {
@@ -160,8 +159,8 @@ body {
 
 .search-btn:active, .search-btn:focus, .search-btn:hover {
   color: #fff;
-   border-color: #f52c34;
-   background: #f52c34;
+  border-color: #f52c34;
+  background: #f52c34;
 }
 
 .transport {
@@ -186,8 +185,7 @@ body {
   border-radius: 0 10px 10px 0;
 }
 
-.middle,
-.last {
+.middle, .last {
   border-left: 0px;
 }
 
@@ -200,8 +198,7 @@ body {
   color: white;
 }
 
-.from-to,
-.dates {
+.from-to, .dates {
   display: flex;
   align-items: center;
   border: 1px solid red;
@@ -213,8 +210,7 @@ body {
   width: 100%;
 }
 
-.from,
-.to {
+.from, .to {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -222,14 +218,12 @@ body {
   overflow: hidden;
 }
 
-.from label,
-.to label {
+.from label, .to label {
   opacity: 0.5;
   font-size: 12px;
 }
 
-.select-going-from,
-.select-going-to {
+.select-going-from, .select-going-to {
   border: none;
   outline: none;
   font-size: 15px;
@@ -401,7 +395,7 @@ label {
     justify-content: space-between;
     padding: 0 20px;
   }
-  .links,
+  .navbar-menu,
   .profile,
   .my-bookings {
     display: none;
@@ -416,7 +410,7 @@ label {
     padding-right: 10px;
     width: 100%;
   }
-  .transports {
+  .ticket {
     width: 100%;
     background-color: transparent;
     transform: translate(-50%, -50%);
