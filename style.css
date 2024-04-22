@@ -107,7 +107,7 @@ body {
 }
 
 .main {
-  padding-top: px;
+  padding-top: 80px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -115,7 +115,12 @@ body {
   justify-content: center;
   min-height: 10vh;
 }
-
+.go{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
 .choose-routes {
   width: 80%;
   background-color: #ffffff;
@@ -383,6 +388,135 @@ label {
 .home:hover {
   box-shadow: 0 0 5px black;
 }
+.loader {
+  height: 100dvh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  background-color: rgba(255, 208, 208, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading forwards 1s linear;
+  animation-delay: 1s;
+}
+
+.outside {
+  position: absolute;
+  width: 90px;
+  height: 95px;
+  border-radius: 100%;
+  border-top: 10px solid red;
+  border-bottom: 10px solid red;
+  animation: out 2s linear infinite;
+}
+
+.inside {
+  position: absolute;
+  width: 75px;
+  height: 70px;
+  border-radius: 100%;
+  border-right: 10px solid black;
+  border-left: 10px solid black;
+  animation: in 2s linear infinite;
+}
+
+.dot1 {
+  position: absolute;
+  background-color: red;
+  animation: dot1 1s linear infinite;
+  border-radius: 50%;
+  z-index: 1;
+}
+.dot2 {
+  position: absolute;
+  background-color: black;
+  animation: dot2 1s linear infinite;
+  animation-delay: 0.5s;
+  border-radius: 50%;
+}
+
+.h3 {
+  margin-top: 150px;
+  font-size: 25px;
+  animation: search 1s linear infinite;
+  width: 150px;
+  text-align: left;
+}
+
+@keyframes star {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 5px;
+    height: 5px;
+    opacity: 1;
+  }
+}
+
+@keyframes loading {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100dvh;
+  }
+}
+
+@keyframes out {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes in {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dot1 {
+  0% {
+    height: 10px;
+    width: 40px;
+  }
+  50% {
+    height: 40px;
+    width: 10px;
+  }
+  100% {
+    height: 10px;
+    width: 40px;
+  }
+}
+
+@keyframes dot2 {
+  0% {
+    height: 10px;
+    width: 40px;
+  }
+  50% {
+    height: 40px;
+    width: 10px;
+  }
+  100% {
+    height: 10px;
+    width: 40px;
+  }
+}
+
 
 @media screen and (max-width: 1000px) {
   .navbar {
